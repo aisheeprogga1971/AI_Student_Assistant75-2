@@ -5,9 +5,6 @@ class User(BaseModel):
     username: str
     password: str
 
-class Question(BaseModel):
-    text: str
-
 class Writing(BaseModel):
     text: str
 
