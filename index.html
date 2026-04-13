@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Student Assistant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>🎓 AI Student Assistant</h1>
+
+  
+
+  <!-- AUTH SECTION -->
+  <div class="auth-box">
+    <h2>Login / Register</h2>
+
+    <input id="username" placeholder="Username">
+    <input id="password" type="password" placeholder="Password">
+
+    <button onclick="register()">Sign Up</button>
+    <button onclick="login()">Login</button>
+    <button onclick="logout()" style="background:red;">Logout</button>
+
+    <p id="auth-msg"></p>
+  </div>
+
+  <p id="status">Using as Guest</p>
+  <!-- AI SECTION -->
+  <div class="card">
+    <h2>Ask AI</h2>
+
+    <input id="question" placeholder="Ask something...">
+    <button id="askBtn" onclick="askAI()">Ask</button>
+
+    <div id="answer"></div>
+  </div>
+
+</div>
+
+
+<!  Adding Script>
+<script src="script.js"></script>
+
+</body>
+</html>
