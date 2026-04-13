@@ -4,12 +4,12 @@ from auth import decode_token
 import openai
 
 router = APIRouter()
-
+#secret API key
 openai.api_key = "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"
 
 class Question(BaseModel):
     text: str
-
+#for ask button
 @router.post("/ask")
 def ask(question: Question, token: str = Query(None)):
 
@@ -22,7 +22,7 @@ def ask(question: Question, token: str = Query(None)):
         except:
             user = "Guest"
 
-    # 🎯 THIS IS YOUR PROMPT
+    # THIS IS YOUR PROMPT
     prompt = f"""
     You are an AI Student Assistant.
 
@@ -35,7 +35,7 @@ def ask(question: Question, token: str = Query(None)):
     {question.text}
     """
 
-    # 🤖 AI CALL
+    # AI CALL
     response = openai.ChatCompletion.create(
         model="gpt-4o-mini",
         messages=[
